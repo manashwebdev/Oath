@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Oath · Never break a promise by accident</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head><body>
+<div class="aura" id="aura"></div>
+<main>
+  <header class="hero">
+    <h1>Who is waiting<br>on you right now?</h1>
+    <p>Every promise you make pulls someone into your orbit. Oath shows who is close, who is overdue, and how reliable you really are.</p>
+  </header>
+  <section class="stats" id="stats"></section>
+  <section class="card orbit-card">
+    <div class="orbit-head"><h2>Your orbit</h2><p id="verdict"></p></div>
+    <div class="stage"><canvas id="orbit"></canvas><div class="tip" id="tip"></div></div>
+    <p class="legend"><i style="--c:#ff5d73"></i>Overdue <i style="--c:#ffb84d"></i>Due within 2 days <i style="--c:#4de2ff"></i>Open <i style="--c:#5ee0a0"></i>All clear <span>Closer to you means more urgent. Click a planet to filter.</span></p>
+  </section>
+  <section class="two">
+    <form class="card" id="form">
+      <h2>Make a promise</h2>
+      <input id="who" list="people" placeholder="Who is it for?" maxlength="40" required autocomplete="off"><datalist id="people"></datalist>
+      <input id="what" placeholder="What did you promise?" maxlength="160" required autocomplete="off">
+      <input id="due" type="date" required>
+      <button class="btn" type="submit">Add to orbit</button><p class="err" id="err"></p>
+    </form>
+    <div class="card"><h2>Trust by person</h2><div id="trust"></div></div>
+  </section>
+  <section class="card"><div class="list-head"><h2>Open promises</h2><button class="chip" id="clear" hidden></button></div><div id="list"></div></section>
+  <footer>Oath · built by <a href="https://github.com/manashwebdev">manashwebdev</a></footer>
+</main>
+<script src="app.js"></script>
+</body></html>
