@@ -9,7 +9,7 @@ exports.resolve = (id, result) => { const p = db.find(x => x.id === id); if (!p)
 exports.remove = (id) => { db = db.filter(x => x.id !== id); save(); };
 
 exports.seed = () => {
-  const D = 864e5, now = Date.now(), iso = (d) => new Date(now + d * D).toISOString().slice(0, 10);
+  const D = 864e5, now = Date.now(), iso = (d) => new Date(now + d * D).toLocaleDateString('en-CA');
   // [who, what, dueOffsetDays, result, resolvedOffsetDays]
   const rows = [
     ['Aarav (Client)', 'Send the revised landing page', -2, null], ['Aarav (Client)', 'Share the invoice', 3, null],

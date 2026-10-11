@@ -108,5 +108,5 @@ $('#list').onclick = async e => {
   else return;
   load();
 };
-const tm = new Date(Date.now() + 864e5); $('#due').value = tm.toISOString().slice(0, 10);
+const tm = new Date(Date.now() + 864e5); $('#due').value = tm.toLocaleDateString('en-CA');
 fit(); load(); frame();
